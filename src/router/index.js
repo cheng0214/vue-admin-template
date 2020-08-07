@@ -160,6 +160,19 @@ export const constantRoutes = [
     ]
   },
 
+  {
+    path: '/console',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Console',
+        component: () => import('@/views/console/index'),
+        meta: { title: 'Console', icon: 'el-icon-link'}
+      }
+    ]
+  },
+
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]
